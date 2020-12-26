@@ -1,0 +1,126 @@
+<html lang='en'>
+    <head>
+        <title>Puzzle</title>
+        <script src="jquery-1.7.2.js" type="text/javascript"></script>
+        <script src="ui/jquery.ui.core.js" type="text/javascript"></script>
+        <script src="ui/jquery.ui.widget.js" type="text/javascript"></script>
+        <script src="ui/jquery.ui.mouse.js" type="text/javascript"></script>
+        <script src="ui/jquery.ui.sortable.js" type="text/javascript"></script>
+        <style>
+			body
+			{
+				background-image: url("bg/00001.jpg");
+				background-size:100% 100%;
+			}
+            #sortable { list-style-type: none; margin: 10px auto; padding: 0; }
+            #sortable li { float: left;}
+        </style>
+        <script type="text/javascript">
+            $(function() {
+                $("#sortable").sortable({
+                    opacity: 0.6,
+                    cursor: 'move',
+                    update: function() {
+                        var winningString = "01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25";
+                        var currentString = '';
+                        
+                        $('#sortable li').each(function(){
+                            var imageId = $(this).attr("id");
+                            currentString += imageId.replace("ID_", "")+",";
+                        });
+                        
+                        currentString = currentString.substr(0,(currentString.length) -1);
+                        
+                        if(currentString == winningString){
+                            alert("Happy New Year 2013");
+                        }
+                        console.log(currentString);
+                    }
+                });
+
+            });
+        </script>
+    </head>
+
+    <body>
+	
+	<ul id='sortable' style='width:500px;height:500px;'>
+		<li class='ui-state-default' id='ID_02' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_02.png' />
+		</li>
+		<li class='ui-state-default' id='ID_04' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_04.png' />
+		</li>
+		<li class='ui-state-default' id='ID_06' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_06.png' />
+		</li>
+		<li class='ui-state-default' id='ID_07' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_07.png' />
+		</li>
+		<li class='ui-state-default' id='ID_05' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_05.png' />
+		</li>
+		<li class='ui-state-default' id='ID_09' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_09.png' />
+		</li>
+		<li class='ui-state-default' id='ID_18' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_18.png' />
+		</li>
+		<li class='ui-state-default' id='ID_11' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_11.png' />
+		</li>
+		<li class='ui-state-default' id='ID_13' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_13.png' />
+		</li>
+		<li class='ui-state-default' id='ID_08' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_08.png' />
+		</li>
+		<li class='ui-state-default' id='ID_03' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_03.png' />
+		</li>
+		<li class='ui-state-default' id='ID_16' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_16.png' />
+		</li>
+		<li class='ui-state-default' id='ID_15' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_15.png' />
+		</li>
+		<li class='ui-state-default' id='ID_10' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_10.png' />
+		</li>
+		<li class='ui-state-default' id='ID_22' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_22.png' />
+		</li>
+		<li class='ui-state-default' id='ID_21' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_21.png' />
+		</li>
+		<li class='ui-state-default' id='ID_24' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_24.png' />
+		</li>
+		<li class='ui-state-default' id='ID_01' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_01.png'/>
+		</li>
+		<li class='ui-state-default' id='ID_14' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_14.png' />
+		</li>
+		<li class='ui-state-default' id='ID_19' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_19.png' />
+		</li>
+		<li class='ui-state-default' id='ID_12' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_12.png' />
+		</li>
+		<li class='ui-state-default' id='ID_17' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_17.png' />
+		</li>
+		<li class='ui-state-default' id='ID_25' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_25.png' />
+		</li>
+		<li class='ui-state-default' id='ID_23' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_23.png' />
+		</li>
+		<li class='ui-state-default' id='ID_20' style='border:none;width:100px;height:100px'>
+				<img src='images/ID_20.png' />
+		</li>
+	</ul>
+	
+	</body>
+</html>
